@@ -62,6 +62,7 @@ Custom fonts are used in this project. Fonts are loaded using expo-font and expo
 This app uses the TVmaze API to fetch movie data.
 
 Search endpoint: https://api.tvmaze.com/search/shows?q={search_term}
+
 Example: https://api.tvmaze.com/search/shows?q=all
 
 ### Contributing
