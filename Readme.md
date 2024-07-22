@@ -28,7 +28,7 @@ cd movies
 2. Install dependencies:
 
 npm install
-# or
+or
 yarn install
 
 3. Install Expo CLI globally if you haven't already:
