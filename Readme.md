@@ -73,7 +73,6 @@ Contributions are welcome! Please fork the repository and create a pull request.
 
 This project is licensed under the MIT License.
 
-![WhatsApp Image 2024-07-23 at 04 49 20_21d706a5](https://github.com/user-attachments/assets/2accef26-c34a-4bfc-a105-9ac1b938443c)
 
 
 ## Contact
@@ -83,3 +82,5 @@ For any inquiries, please contact:
 - Your Name - [abhijeet vishwakarma](mailto:abhijeetdrv@gmail.com)
 - Project Link - [https://github.com/Abhi3110200/movies](https://github.com/Abhi3110200/movies)
 
+![WhatsApp Image 2024-07-23 at 04 49 20_864a2e24](https://github.com/user-attachments/assets/d4cdf904-9d7e-43c4-a873-20bfa0a80297)
+![WhatsApp Image 2024-07-23 at 04 49 20_21d706a5](https://github.com/user-attachments/assets/2accef26-c34a-4bfc-a105-9ac1b938443c)
