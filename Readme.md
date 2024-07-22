@@ -78,5 +78,5 @@ This project is licensed under the MIT License.
 For any inquiries, please contact:
 
 - Your Name - [abhijeetdrv@gmail.com](mailto:abhijeetdrv@gmail.com)
-- Project Link - [https://github.com/Abhi3110200](https://github.com/Abhi3110200)
+- Project Link - [https://github.com/Abhi3110200/movies](https://github.com/Abhi3110200/movies)
 
