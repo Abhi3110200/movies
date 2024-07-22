@@ -1,4 +1,4 @@
-import { View, Text, TextInput, FlatList, TouchableOpacity } from 'react-native'
+import { View, Text, TextInput, FlatList, TouchableOpacity, ActivityIndicator } from 'react-native'
 import React, { useState } from 'react'
 import MovieCard from './components/MovieCard';
 import axios from 'axios';
@@ -8,13 +8,17 @@ import { Entypo } from '@expo/vector-icons';
 const SearchScreen = ({navigation}) => {
     const [searchTerm, setSearchTerm] = useState('');
   const [results, setResults] = useState([]);
+  const [loading, setLoading] = useState(false);
   
 
   const handleSearch = (term) => {
     if (term.length > 0) {
+        setLoading(true);
       axios.get(`https://api.tvmaze.com/search/shows?q=${term}`)
         .then(response => setResults(response.data))
-        .catch(error => console.error(error));
+        .catch(error => console.error(error))
+        .finally(() => setLoading(false));
+        
     }
     else{
         setResults([]);
@@ -86,19 +90,27 @@ const SearchScreen = ({navigation}) => {
         backgroundColor:'#343333'
       }}/>
 
-        <FlatList 
+        {loading ? (
+            <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+            <ActivityIndicator size="large" color="#ffffff" />
+            </View>
+        ) : results.length === 0 && searchTerm.length > 2 ? (
+            <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+            <Text style={{ color: 'white', fontSize: 18 }}>No movies found</Text>
+            </View>
+        ) : (
+            <FlatList
             numColumns={2}
-            columnWrapperStyle={{justifyContent:'space-between'}}
+            columnWrapperStyle={{ justifyContent: 'space-between' }}
             data={results}
             keyExtractor={(item) => item.show.id.toString()}
-            renderItem={({item})=>(
-                <TouchableOpacity onPress={() => navigation.navigate('Details', {movie: item.show})} style={{
-                    padding:10, 
-                    }}>
-                        <MovieCard movie={item?.show}/>
+            renderItem={({ item }) => (
+                <TouchableOpacity onPress={() => navigation.navigate('Details', { movie: item.show })} style={{ padding: 10 }}>
+                <MovieCard movie={item.show} />
                 </TouchableOpacity>
-                )}
-        />
+            )}
+            />
+        )}
     </View>
   )
 }
