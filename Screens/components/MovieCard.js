@@ -55,7 +55,7 @@ const MovieCard = ({movie}) => {
             }}>{movie?.schedule?.time ? movie?.schedule?.time : '00:00'}</Text>
         </View>
 
-        {/* <Pressable style={{
+        <Pressable style={{
             backgroundColor:'gray',
             padding:10,
             marginTop:10,
@@ -66,7 +66,7 @@ const MovieCard = ({movie}) => {
                 fontSize:14,
                 fontWeight:'bold'
             }}>Watch Now</Text>
-        </Pressable> */}
+        </Pressable>
       </View>
     </View>
   )
