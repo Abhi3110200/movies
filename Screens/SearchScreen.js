@@ -101,6 +101,7 @@ const SearchScreen = ({navigation}) => {
         ) : (
             <FlatList
             numColumns={2}
+            showsVerticalScrollIndicator={false}
             columnWrapperStyle={{ justifyContent: 'space-between' }}
             data={results}
             keyExtractor={(item) => item.show.id.toString()}
